@@ -8,16 +8,7 @@
 			"database": "summer2025",
 			"encrypt": "mandatory",
 			"trustServerCertificate": true,
-			"authenticationType": "SQL",
-			"userName": "saadmin",
-			"password": {
-				"type": "AzureKeyVaultSecret",
-				"store": {
-					"referenceName": "AzureKeyVault1",
-					"type": "LinkedServiceReference"
-				},
-				"secretName": "saadminpassword"
-			}
+			"authenticationType": "SystemAssignedManagedIdentity"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/linkedservices"
