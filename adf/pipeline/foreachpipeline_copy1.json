@@ -80,7 +80,7 @@
 										"filesystem": "raw",
 										"directory": "incoming",
 										"filename": {
-											"value": "@item()",
+											"value": "@item().Tablename",
 											"type": "Expression"
 										}
 									}
