@@ -72,7 +72,7 @@
 		"parameters": {
 			"Tablename_param": {
 				"type": "string",
-				"defaultValue": "Product"
+				"defaultValue": "CustomerAddress"
 			}
 		},
 		"variables": {
