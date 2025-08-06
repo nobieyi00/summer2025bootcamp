@@ -1,0 +1,15 @@
+{
+	"name": "AzureSqlDatabase1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "summer2025server.database.windows.net",
+			"database": "summer2025",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SystemAssignedManagedIdentity"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
+}
