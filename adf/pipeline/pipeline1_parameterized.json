@@ -46,7 +46,7 @@
 						"referenceName": "AzureSqlTable_parameterized",
 						"type": "DatasetReference",
 						"parameters": {
-							"Tablename": "Customer"
+							"Tablename": "Product"
 						}
 					}
 				],
@@ -57,7 +57,7 @@
 						"parameters": {
 							"filesystem": "raw",
 							"directory": "incoming",
-							"filename": "Customer"
+							"filename": "Product"
 						}
 					}
 				]
