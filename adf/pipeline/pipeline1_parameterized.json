@@ -71,7 +71,8 @@
 		],
 		"parameters": {
 			"Tablename_param": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "Product"
 			}
 		},
 		"variables": {
