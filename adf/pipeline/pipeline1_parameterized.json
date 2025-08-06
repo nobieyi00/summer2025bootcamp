@@ -46,7 +46,10 @@
 						"referenceName": "AzureSqlTable_parameterized",
 						"type": "DatasetReference",
 						"parameters": {
-							"Tablename": "Product"
+							"Tablename": {
+								"value": "@pipeline().parameters.Tablename_param",
+								"type": "Expression"
+							}
 						}
 					}
 				],
@@ -57,12 +60,25 @@
 						"parameters": {
 							"filesystem": "raw",
 							"directory": "incoming",
-							"filename": "Product"
+							"filename": {
+								"value": "@pipeline().parameters.Tablename_param",
+								"type": "Expression"
+							}
 						}
 					}
 				]
 			}
 		],
+		"parameters": {
+			"Tablename_param": {
+				"type": "string"
+			}
+		},
+		"variables": {
+			"Tablename_var": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
