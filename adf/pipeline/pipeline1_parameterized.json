@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "pipeline1_parameterized",
 	"properties": {
 		"activities": [
 			{
@@ -20,12 +20,45 @@
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "AzureSqlTable_parameterized",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Tablename": "Customer"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DelimitedText2_parameterized",
+						"type": "DatasetReference",
+						"parameters": {
+							"filesystem": "raw",
+							"directory": "incoming",
+							"filename": "Customer"
+						}
 					}
 				]
 			}
