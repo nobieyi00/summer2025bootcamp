@@ -78,6 +78,9 @@
 		"variables": {
 			"Tablename_var": {
 				"type": "String"
+			},
+			"myvar": {
+				"type": "Array"
 			}
 		},
 		"annotations": []
