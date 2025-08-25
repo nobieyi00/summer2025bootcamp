@@ -5,7 +5,7 @@
 		"type": "AzureDatabricksDeltaLake",
 		"typeProperties": {
 			"domain": "https://adb-2524205312402814.14.azuredatabricks.net",
-			"clusterId": "0819-234249-sy0ihwgy",
+			"clusterId": "0825-184823-g8qrjfly",
 			"workspaceResourceId": "/subscriptions/75adad68-cca6-4cc2-b266-9eb5330fb50d/resourceGroups/summer2025/providers/Microsoft.Databricks/workspaces/summer2025adb"
 		}
 	},
