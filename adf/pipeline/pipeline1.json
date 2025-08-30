@@ -16,20 +16,22 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "AzureDatabricksDeltaLakeSource",
-						"query": "select * from mycatalog.default.address",
-						"exportSettings": {
-							"type": "AzureDatabricksDeltaLakeExportCommand"
+						"type": "ParquetSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "ParquetReadSettings"
 						}
 					},
 					"sink": {
-						"type": "ParquetSink",
-						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings"
-						},
-						"formatSettings": {
-							"type": "ParquetWriteSettings"
-						}
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
 					},
 					"enableStaging": true,
 					"stagingSettings": {
@@ -37,18 +39,29 @@
 							"referenceName": "AzureDataLakeStorage1",
 							"type": "LinkedServiceReference"
 						}
+					},
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
 					}
 				},
 				"inputs": [
 					{
-						"referenceName": "AzureDatabricksDeltaLakeDataset1",
+						"referenceName": "Parquet1",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "Parquet1",
-						"type": "DatasetReference"
+						"referenceName": "AzureSqlTable_parameterized",
+						"type": "DatasetReference",
+						"parameters": {
+							"Tablename": "mytableuc"
+						}
 					}
 				]
 			}

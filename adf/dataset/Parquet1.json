@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "input/uctable",
+				"fileName": "uctable",
+				"folderPath": "input",
 				"fileSystem": "raw"
 			},
 			"compressionCodec": "snappy"
