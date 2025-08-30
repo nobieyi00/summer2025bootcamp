@@ -9,7 +9,7 @@
 		"type": "AzureDatabricksDeltaLakeDataset",
 		"typeProperties": {
 			"database": "mycatalog.default",
-			"table": "managed_people"
+			"table": "address"
 		},
 		"schema": [
 			{
