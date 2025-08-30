@@ -8,8 +8,8 @@
 		"annotations": [],
 		"type": "AzureDatabricksDeltaLakeDataset",
 		"typeProperties": {
-			"database": "default",
-			"table": "address"
+			"database": "mycatalog.default",
+			"table": "managed_people"
 		},
 		"schema": [
 			{
