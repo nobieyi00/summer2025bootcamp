@@ -1,0 +1,53 @@
+{
+	"name": "AzureDatabricksDeltaLakeDataset1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDatabricksDeltaLake1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDatabricksDeltaLakeDataset",
+		"typeProperties": {
+			"database": "default",
+			"table": "address"
+		},
+		"schema": [
+			{
+				"name": "AddressID",
+				"type": "string"
+			},
+			{
+				"name": "AddressLine1",
+				"type": "string"
+			},
+			{
+				"name": "AddressLine2",
+				"type": "string"
+			},
+			{
+				"name": "City",
+				"type": "string"
+			},
+			{
+				"name": "StateProvince",
+				"type": "string"
+			},
+			{
+				"name": "CountryRegion",
+				"type": "string"
+			},
+			{
+				"name": "PostalCode",
+				"type": "string"
+			},
+			{
+				"name": "rowguid",
+				"type": "string"
+			},
+			{
+				"name": "ModifiedDate",
+				"type": "string"
+			}
+		]
+	}
+}
