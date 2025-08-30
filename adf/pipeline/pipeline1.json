@@ -54,7 +54,10 @@
 				"inputs": [
 					{
 						"referenceName": "Parquet1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": " "
+						}
 					}
 				],
 				"outputs": [
