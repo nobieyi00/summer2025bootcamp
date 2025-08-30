@@ -23,17 +23,21 @@
 						}
 					},
 					"sink": {
-						"type": "DelimitedTextSink",
+						"type": "ParquetSink",
 						"storeSettings": {
 							"type": "AzureBlobFSWriteSettings"
 						},
 						"formatSettings": {
-							"type": "DelimitedTextWriteSettings",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
+							"type": "ParquetWriteSettings"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "AzureDataLakeStorage1",
+							"type": "LinkedServiceReference"
+						}
+					}
 				},
 				"inputs": [
 					{
@@ -43,13 +47,8 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText2_parameterized",
-						"type": "DatasetReference",
-						"parameters": {
-							"filesystem": "raw",
-							"directory": "input",
-							"filename": "sampledata"
-						}
+						"referenceName": "Parquet1",
+						"type": "DatasetReference"
 					}
 				]
 			}
