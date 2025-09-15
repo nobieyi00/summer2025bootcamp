@@ -1,0 +1,13 @@
+Beginner Medallion Demo — Duplicates Only (v3)
+
+Files in this folder:
+- customers.csv  — duplicates for customer_id 4 and 10 (keep newest by updated_at)
+- orders.csv     — duplicate rows for order_id 1012 (keep newest by order_date)
+- Beginner_Medallion_Dedup.py — Databricks notebook (Bronze -> Silver dedup -> Gold daily sales)
+- README.txt
+
+How to use in Databricks:
+1) Upload CSVs to: /FileStore/medallion_beginner/raw/
+2) Import the notebook file into your workspace.
+3) Set catalog/schema (e.g., main.medallion_beginner) and run all cells.
+4) Explore tables: bronze_* , silver_* , gold_sales_by_day
