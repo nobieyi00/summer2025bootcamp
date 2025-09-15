@@ -1,0 +1,13 @@
+customer_id,first_name,last_name,email,updated_at
+1,Amara,Smith,amara.smith@example.com,2024-06-01T09:00:00Z
+2,Liam,Johnson,liam.johnson@example.com,2024-06-01T09:05:00Z
+3,Olivia,Brown,olivia.brown@example.com,2024-06-01T09:10:00Z
+4,Noah,Williams,noah.williams@oldmail.com,2024-06-02T08:00:00Z
+4,Noah,Williams,noah.williams@example.com,2024-06-03T08:30:00Z
+5,Ava,Jones,ava.jones@example.com,2024-06-01T09:12:00Z
+6,Mason,Garcia,mason.garcia@example.com,2024-06-01T09:15:00Z
+7,Sophia,Davis,sophia.davis@example.com,2024-06-01T09:18:00Z
+8,Ethan,Miller,ethan.miller@example.com,2024-06-01T09:25:00Z
+9,Isabella,Rodriguez,isabella.rod@example.com,2024-06-01T09:30:00Z
+10,Leo,Martinez,leo.martinez@oldmail.com,2024-06-02T07:45:00Z
+10,Leo,Martinez,leo.martinez@example.com,2024-06-04T12:00:00Z
